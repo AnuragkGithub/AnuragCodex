@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPSK Notes App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero card">
+        <div>
+          <p class="eyebrow">UPSK Bootcamp · Session 1</p>
+          <h1>Notes App Foundation</h1>
+          <p class="lede">
+            We’re starting with system design fundamentals and building a simple notes app that can later grow into a full stack project.
+          </p>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">Current focus</span>
+            <strong>Design the foundation first</strong>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Public proof</span>
+            <strong>Evidence log included</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="layout">
+        <section class="card app-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Notes</p>
+              <h2>Your workspace</h2>
+            </div>
+            <p class="section-copy">
+              Add a note, pin something important, or delete it when you no longer need it. The data persists in your browser for now.
+            </p>
+          </div>
+
+          <form id="note-form" class="note-form">
+            <label class="field">
+              <span>Title</span>
+              <input id="note-title" name="title" type="text" placeholder="Meeting notes" autocomplete="off" />
+            </label>
+
+            <label class="field field-wide">
+              <span>Body</span>
+              <textarea
+                id="note-body"
+                name="body"
+                rows="5"
+                placeholder="Write your note here..."
+              ></textarea>
+            </label>
+
+            <div class="form-actions">
+              <label class="checkbox">
+                <input id="note-pinned" type="checkbox" />
+                <span>Pin note</span>
+              </label>
+              <button type="submit">Add note</button>
+            </div>
+          </form>
+
+          <div class="stats">
+            <div class="stat">
+              <strong id="note-count">0</strong>
+              <span>Total notes</span>
+            </div>
+            <div class="stat">
+              <strong id="pinned-count">0</strong>
+              <span>Pinned notes</span>
+            </div>
+            <div class="stat">
+              <strong id="proof-count">1</strong>
+              <span>Proof entries</span>
+            </div>
+          </div>
+
+          <div class="list-header">
+            <h3>Saved notes</h3>
+            <span id="empty-state">No notes yet. Add your first note above.</span>
+          </div>
+
+          <div id="notes-list" class="notes-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="card sidebar">
+          <section class="sidebar-block">
+            <p class="eyebrow">System Design</p>
+            <h2>What we are proving</h2>
+            <ul class="checklist">
+              <li>We can identify the user goal clearly.</li>
+              <li>We can define the data model before coding too much.</li>
+              <li>We can think about failure cases and future growth.</li>
+            </ul>
+          </section>
+
+          <section class="sidebar-block">
+            <p class="eyebrow">Session 1 evidence</p>
+            <h2>Public proof draft</h2>
+            <div class="proof-card">
+              <strong>Built:</strong>
+              <p>Notes app foundation with add, pin, delete, and local persistence.</p>
+              <strong>Decided:</strong>
+              <p>Start with a small browser-only version before adding a backend.</p>
+              <strong>Verified:</strong>
+              <p>Notes are saved in localStorage and reappear after refresh.</p>
+            </div>
+          </section>
+
+          <section class="sidebar-block">
+            <p class="eyebrow">Next step</p>
+            <h2>GitHub connection</h2>
+            <p class="muted">
+              After we confirm your remote repository, we’ll connect this project to GitHub so your proof can be public and versioned.
+            </p>
+            <div class="next-steps">
+              <span>1. Create or link a GitHub repo</span>
+              <span>2. Push the first commit</span>
+              <span>3. Add Session 1 notes to docs/proof</span>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
